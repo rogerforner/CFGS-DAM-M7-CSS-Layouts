@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Meta etiquetes
+  ================================================== -->
+	<!-- Informació -->
+	<meta charset="utf-8">
+	<meta name="description" content="Pràctica de MP07.">
+	<meta name="keywords" content="html,css,responsive,layouts,github,acacha">
+	<meta name="author" content="Roger Forner Fabre">
+
+	<title>Mostly fluid | Responsive Layouts</title>
+
+	<!-- Responsive -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Estils
+  ================================================== -->
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+  
+	<style>
+		/* Layout CSS link
+     **********************************/
+		a {
+			color: #333;
+			text-decoration: none;
+		}
+		i.fa-heart {
+			color: red;
+		}
+		/* Seccions
+     **********************************/
+		/* Contenedors */
+		
+		body {
+			margin: 0px;
+		}
+		
+		.container {
+			display: flex;
+			display: -webkit-flex;
+			flex-flow: row wrap;
+			margin: 0px;
+			padding: 0px;
+			width: 100%;
+		}
+		
+		/* Seccions */
+		.container section {
+			box-sizing: border-box;
+			min-height: 150px;
+			min-width: 150px;
+		}
+		
+		.c1 {
+			background-color: yellow;
+		}
+		
+		.c2 {
+			background-color: yellowgreen;
+		}
+		
+		.c3 {
+			background-color: greenyellow;
+		}
+		
+		.c4 {
+			background-color: lightyellow;
+		}
+		
+		.c5 {
+			background-color: lightgoldenrodyellow;
+		}
+		
+		.c1,
+		.c2,
+		.c3,
+		.c4,
+		.c5 {
+			border: 1px solid white;
+			width: 100%;
+		}
+		/* Títols */
+		
+		h1 {
+			margin: 0;
+			text-align: center;
+		}
+		/* Media Queries */
+		
+		@media (min-width: 600px) {
+			.c2,
+			.c3,
+			.c4,
+			.c5 {
+				width: 50%;
+			}
+		}
+		
+		@media (min-width: 800px) {
+			.container {
+				width: 800px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			.c1 {
+				width: 60%;
+			}
+			.c2 {
+				width: 40%;
+			}
+			.c3,
+			.c4,
+			.c5 {
+				width: 33.33%;
+			}
+		}
+	</style>
+</head>
+<html>
+
+<body>
+	<div class="container">
+		<section class="c1">
+			<h1><a href="http://htmlpreview.github.io/?https://rogerforner.github.io/tinkeringCSSLayouts/"><i class="fa fa-heart animated infinite pulse" aria-hidden="true"></i> Layouts CSS</a></h1>
+		</section>
+		<section class="c2">
+			<h1>c2</h1>
+		</section>
+		<section class="c3">
+			<h1>c3</h1>
+		</section>
+		<section class="c4">
+			<h1>c4</h1>
+		</section>
+		<section class="c5">
+			<h1>c5</h1>
+		</section>
+	</div>
+</body>
+
+</html>

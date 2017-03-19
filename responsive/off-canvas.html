@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Meta etiquetes
+  ================================================== -->
+	<!-- Informació -->
+	<meta charset="utf-8">
+	<meta name="description" content="Pràctica de MP07.">
+	<meta name="keywords" content="html,css,responsive,layouts,github,acacha">
+	<meta name="author" content="Roger Forner Fabre">
+
+	<title>Off canvas | Responsive Layouts</title>
+
+	<!-- Responsive -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Estils
+  ================================================== -->
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+  
+	<style>
+		/* Layout CSS link
+     **********************************/
+		a {
+			color: #333;
+			text-decoration: none;
+		}
+		i.fa-heart {
+			color: red;
+		}
+		h1 {
+			text-align: center;
+		}
+		
+		/* Seccions
+     **********************************/
+		/* Contenedors */
+		body {
+			margin: 0px;
+			height: 100%;
+			overflow-x: hidden;
+		}
+		
+		.container {
+			display: block;
+			margin: 0;
+			padding: 0;
+			width: 100%;
+		}
+		
+		/* Seccions */
+		.container section {
+        box-sizing: border-box;
+        height: 100vh;
+    }
+    .c1, .c3 {
+        position: absolute;
+        width: 250px;
+        height: 100%;
+    }
+    .c3 {
+        left: 100%;
+        z-index: 1;
+    }
+    .c1 {
+        background-color: floralwhite;
+        transform: translate(-250px,0);
+        transition: transform 0.4s ease-out;
+        z-index: 1;
+    }
+    .c1.open {
+        transform: translate(0,0);
+    }
+    .c2 {
+			background-color: white;
+			transform: translate(0,0);
+			-webkit-box-shadow: inset 0px 0px 100px 10px rgba(0,0,0,0.71);
+			-moz-box-shadow: inset 0px 0px 100px 10px rgba(0,0,0,0.71);
+			box-shadow: inset 0px 0px 100px 10px rgba(0,0,0,0.71);
+    }
+    .c3 {
+        background-color: white;
+    }
+    .c3.open {
+        transform: translate(-250px,0);
+    }
+		
+		/* Efectes
+     **********************************/
+    
+    .parallax {
+      height: 250px;
+      background-image: url("https://source.unsplash.com/category/nature/1920x1080");
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+	</style>
+</head>
+
+<html>
+
+<body>
+	<div class="container">
+		<section class="c1" role="leftsidebar" id="left">
+			<input type="button" value="close" onclick="window.toogleleft()" id="leftMenuButton2">
+			<h1><a href="http://htmlpreview.github.io/?https://rogerforner.github.io/tinkeringCSSLayouts/"><i class="fa fa-heart animated infinite pulse" aria-hidden="true"></i> Layouts CSS</a></h1>
+		</section>
+		<section class="c2 parallax">
+			<input type="button" value="open" onclick="window.toogleleft()" id="leftMenuButton">
+		</section>
+		<section class="c3" role="rightsidebar" id="right"></section>
+	</div>
+
+	<!-- Script Obrir/Tancar
+  ================================================== -->
+	<script>
+		var leftsb = true;
+
+		function toogleleft(evt) {
+			var left = document.getElementById('left');
+			if (leftsb) left.classList.add('open');
+			else left.classList.remove('open');
+			leftsb = !leftsb;
+		}
+
+		function open(evt) {
+			// On links: evt.preventDefault();
+			var left = document.getElementById('left');
+			//Drawer
+			left.classList.add('open');
+		}
+
+		function close(evt) {
+			// On links: evt.preventDefault();
+			var left = document.getElementById('left');
+			//Drawer
+			left.classList.remove('open');
+		}
+	</script>
+</body>
+
+</html>

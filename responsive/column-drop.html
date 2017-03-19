@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ca">
+<head>
+	<!-- Meta etiquetes
+  ================================================== -->
+	<!-- Informació -->
+	<meta charset="utf-8">
+	<meta name="description" content="Pràctica de MP07.">
+	<meta name="keywords" content="html,css,responsive,layouts,github,acacha">
+	<meta name="author" content="Roger Forner Fabre">
+
+	<title>Column drop | Responsive Layouts</title>
+
+	<!-- Responsive -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Estils
+  ================================================== -->
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+  
+	<style>
+		/* Layout CSS link
+     **********************************/
+		a {
+			color: #333;
+			text-decoration: none;
+		}
+		i.fa-heart {
+			color: red;
+		}
+		
+		/* Seccions
+     **********************************/
+		/* Contenedors */
+		
+		body {
+			margin: 0px;
+		}
+		
+		.container {
+			display: flex;
+			display: -webkit-flex;
+			flex-flow: row wrap;
+			margin: 0px;
+			padding: 0px;
+			width: 100%;
+		}
+		/* Seccions */
+		
+		.container section {
+			box-sizing: border-box;
+			min-height: 150px;
+			min-width: 150px;
+		}
+		
+		section.c1 {
+			background-color: lightpink;
+		}
+		
+		section.c2 {
+			background-color: lightcyan;
+		}
+		
+		section.c3 {
+			background-color: lightyellow;
+		}
+		
+		.c1,
+		.c2,
+		.c3 {
+			width: 100%;
+			text-align: center;
+		}
+		/* Media Queries
+     **********************************/
+		
+		@media (min-width: 600px) {
+			.c1 {
+				width: 60%;
+				-webkit-order: 2;
+				order: 2;
+			}
+			.c2 {
+				width: 40%;
+				-webkit-order: 1;
+				order: 1;
+			}
+			.c3 {
+				width: 100%;
+				-webkit-order: 3;
+				order: 3;
+			}
+		}
+		
+		@media (min-width: 800px) {
+			.c2 {
+				width: 20%;
+			}
+			.c3 {
+				width: 20%;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<section class="c1">
+			<h1><a href="http://htmlpreview.github.io/?https://rogerforner.github.io/tinkeringCSSLayouts/"><i class="fa fa-heart animated infinite pulse" aria-hidden="true"></i> Layouts CSS</a></h1>
+		</section>
+		<section class="c2">
+			<h1>c2</h1>
+		</section>
+		<section class="c3">
+			<h1>c3</h1>
+		</section>
+	</div>
+</body>
+
+</html>
